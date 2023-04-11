@@ -1,7 +1,7 @@
-import React, {useState} from "react"
+import React from "react"
 import './App.css';
 import NavBar from "./components/navbar/Navbar"
-import Canvas from "./components/canvas/Canvas"
+import CanvasBackground from "./components/canvas/CanvasBackground";
 import {createTheme,ThemeProvider} from "@mui/material"
 
 const theme = createTheme({
@@ -25,13 +25,12 @@ const theme = createTheme({
 
 function App() {
 
-  const [headerHeight,setHeaderHeight] = useState(0)
-
   return (
     <ThemeProvider theme={theme}>
     <div className="App">
-      <NavBar setHeaderHeight={setHeaderHeight}></NavBar>
-      <Canvas headerHeight={headerHeight}></Canvas>
+      <NavBar></NavBar>
+      <CanvasBackground></CanvasBackground>
+
     </div>
     </ThemeProvider>
   );

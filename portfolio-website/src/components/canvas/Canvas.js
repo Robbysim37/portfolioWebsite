@@ -5,7 +5,7 @@ const Canvas = (props) => {
     useEffect(() => {
         const canvas = canvasRef.current
         const c = canvas.getContext("2d")
-        c.fillStyle = "#000000"
+        c.fillStyle = "#666666"
         c.fillRect(0,0,c.canvas.width,c.canvas.height)
         console.log(props.headerHeight)
     })
