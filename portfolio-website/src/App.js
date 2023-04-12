@@ -1,7 +1,7 @@
 import React from "react"
 import './App.css';
 import NavBar from "./components/navbar/Navbar"
-import CanvasBackground from "./components/canvas/CanvasBackground";
+import PixelContainer from "./components/pixelGrid/PixelContainer"
 import {createTheme,ThemeProvider} from "@mui/material"
 
 const theme = createTheme({
@@ -29,8 +29,7 @@ function App() {
     <ThemeProvider theme={theme}>
     <div className="App">
       <NavBar></NavBar>
-      <CanvasBackground></CanvasBackground>
-
+      <PixelContainer></PixelContainer>
     </div>
     </ThemeProvider>
   );
