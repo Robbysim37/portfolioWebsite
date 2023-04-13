@@ -2,7 +2,7 @@ import React from "react"
 import './App.css';
 import NavBar from "./components/navbar/Navbar"
 import PixelContainer from "./components/pixelGrid/PixelContainer"
-import {createTheme,ThemeProvider} from "@mui/material"
+import {createTheme,ThemeProvider,Box} from "@mui/material"
 
 const theme = createTheme({
   palette: {
@@ -29,7 +29,9 @@ function App() {
     <ThemeProvider theme={theme}>
     <div className="App">
       <NavBar></NavBar>
-      <PixelContainer></PixelContainer>
+      <Box sx={{position:"absolute",width:"100vw",height:"100vh",backgroundColor:"primary.dark"}}>
+      <PixelContainer sx={{backgroundColor:"primary.dark"}}></PixelContainer>
+      </Box>
     </div>
     </ThemeProvider>
   );
