@@ -1,4 +1,4 @@
-import React, {useRef,useEffect} from "react"
+import React from "react"
 import logo from "./RcklessLogo.png"
 import {AppBar, 
         Toolbar, 
@@ -9,14 +9,9 @@ import {AppBar,
 
 const Navbar = (props) => {
 
-const headerRef = useRef(null)
-
-useEffect(() => {
-    props.setHeaderHeight(headerRef.current.offsetHeight)
-})
 
 return (
-<AppBar ref={headerRef} position="absolute" sx={{zIndex:1}}>
+<AppBar position="absolute">
     <Toolbar>
         <IconButton size="small"
         edge="start"

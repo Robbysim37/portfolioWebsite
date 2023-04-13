@@ -1,8 +1,8 @@
-import React, {useState} from "react"
+import React from "react"
 import './App.css';
 import NavBar from "./components/navbar/Navbar"
-import Canvas from "./components/canvas/Canvas"
-import {createTheme,ThemeProvider} from "@mui/material"
+import PixelContainer from "./components/pixelGrid/PixelContainer"
+import {createTheme,ThemeProvider,Box} from "@mui/material"
 
 const theme = createTheme({
   palette: {
@@ -25,13 +25,13 @@ const theme = createTheme({
 
 function App() {
 
-  const [headerHeight,setHeaderHeight] = useState(0)
-
   return (
     <ThemeProvider theme={theme}>
     <div className="App">
-      <NavBar setHeaderHeight={setHeaderHeight}></NavBar>
-      <Canvas headerHeight={headerHeight}></Canvas>
+      <NavBar></NavBar>
+      <Box sx={{position:"absolute",width:"100vw",height:"100vh",backgroundColor:"primary.dark"}}>
+      <PixelContainer sx={{backgroundColor:"primary.dark"}}></PixelContainer>
+      </Box>
     </div>
     </ThemeProvider>
   );
