@@ -11,7 +11,7 @@ const Navbar = (props) => {
 
 
 return (
-<AppBar position="absolute">
+<AppBar>
     <Toolbar>
         <IconButton size="small"
         edge="start"
