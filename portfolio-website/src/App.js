@@ -2,7 +2,7 @@ import React from "react"
 import './App.css';
 import NavBar from "./components/navbar/Navbar"
 import PixelContainer from "./components/pixelGrid/PixelContainer"
-import {createTheme,ThemeProvider,Box} from "@mui/material"
+import {createTheme,ThemeProvider,Box,Typography} from "@mui/material"
 
 const theme = createTheme({
   palette: {
