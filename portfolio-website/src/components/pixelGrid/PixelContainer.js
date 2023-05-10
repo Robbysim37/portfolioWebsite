@@ -1,5 +1,6 @@
-import {Stack,Box,Typography} from "@mui/material"
+import {Stack,Box,Button,Link} from "@mui/material"
 import {useState,useEffect} from "react"
+import IntroText from "./IntroText"
 
 const PixelContainer = () => {
  const IMG_SIZE = 32
@@ -25,14 +26,14 @@ const PixelContainer = () => {
  const [gridHeight, setGridHeight] = useState(grid[grid.length - 1].length)
  const [gridWidth, setGridWidth] = useState(grid.length)
  const [drawGuy, setDrawGuy] = useState({x: Math.floor(gridWidth / 2),y: Math.floor(gridHeight / 2)})
+ const [showText, setShowText] = useState(true)
 
  const HALF_SECOND_MS = 500
 
  const renderGuy = (dir) => {
-    console.log(`x:${drawGuy.x},y:${drawGuy.y}`)
     if(drawGuy.x < 1 || drawGuy.y < 1 || drawGuy.x === gridWidth - 1|| drawGuy.y === gridHeight -1)
     {
-        setDrawGuy({x: Math.ceil(gridWidth / 2),y: Math.ceil(gridHeight / 2)})
+        setDrawGuy({x: Math.floor(gridWidth / 2),y: Math.floor(gridHeight / 2)})
         setGrid(initializeGrid())
     }else{
         const newGrid = [...grid];
@@ -61,11 +62,7 @@ const PixelContainer = () => {
             break
         default:
             break
-        setGrid(newGrid)
-    }
-    }
-    
- }
+    }}}
  
  useEffect(() => {
     const interval = setInterval(() => {
@@ -76,32 +73,16 @@ const PixelContainer = () => {
 }, [renderGuy])
 
     return (
-        
         <Box sx={{
             width:"100%",
             height: "100%",
             display:"flex", 
+            flexDirection:"column",
             justifyContent:"center", 
             alignItems:"center"}}>
-            <Box sx={{border:".2rem black solid"}}>
-                <Stack direction={"row"}>
-                <Typography 
-                sx={{position:"absolute",
-                    zIndex:"1",
-                    fontFamily:"'Rufina', serif",
-                    fontSize:"3rem"}}>
-                        Coding for my future,
-                </Typography>
-                <Typography 
-                sx={{position:"absolute",
-                    zIndex:"1",
-                    fontFamily:"'Rufina', serif",
-                    fontSize:"3rem",
-                    justifySelf:"center",
-                    alignSelf:"flex-end",
-                    marginBottom:"10px"}}>
-                        and coding for fun!
-                </Typography>
+            <Box sx={{border:".2rem black solid",marginTop:"5rem"}}>
+                <Stack direction={"row"} sx={{display:"flex",justifyContent:"center"}}>
+                {showText && <IntroText></IntroText>}
                     {grid.map((col,colIndex) => {
                         return (
                             <Stack direction={"column"}>
@@ -137,7 +118,21 @@ const PixelContainer = () => {
                         )
                     })}
                 </Stack>
+                
             </Box>
+            <Button 
+            sx={{margin:"10px"}} 
+            variant="contained" 
+            onClick={() => setShowText(!showText)}>
+                {showText ? "Hide Text" : "Show Text"}
+            </Button>
+            <Link 
+            sx={{color:"white",fontSize:"2rem"}}
+            target="_blank"
+            underline="hover" 
+            href="https://en.wikipedia.org/wiki/Random_walk">
+                What is a random walks model?
+            </Link>
         </Box>
     )
 }

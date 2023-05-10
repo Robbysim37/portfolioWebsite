@@ -6,6 +6,9 @@ import {createTheme,ThemeProvider,Box,Typography} from "@mui/material"
 
 const theme = createTheme({
   palette: {
+    text: {
+      white: "white"
+    },
     secondary: {
       main: "#d53d3e",
       light: "#dd6465",
@@ -29,8 +32,8 @@ function App() {
     <ThemeProvider theme={theme}>
     <div className="App">
       <NavBar></NavBar>
-      <Box sx={{position:"absolute",width:"100vw",height:"100vh",backgroundColor:"primary.dark"}}>
-      <PixelContainer sx={{backgroundColor:"primary.dark"}}></PixelContainer>
+      <Box sx={{width:"100vw",height:"100vh",backgroundColor:"primary.dark"}}>
+      <PixelContainer></PixelContainer>
       </Box>
     </div>
     </ThemeProvider>
