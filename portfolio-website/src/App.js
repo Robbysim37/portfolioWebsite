@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from "./components/navbar/Navbar"
 import PixelContainer from "./components/pixelGrid/PixelContainer"
 import {createTheme,ThemeProvider,Box,Typography} from "@mui/material"
+import {Routes} from "react-router-dom"
 
 const theme = createTheme({
   palette: {

@@ -127,7 +127,7 @@ const PixelContainer = () => {
                 {showText ? "Hide Text" : "Show Text"}
             </Button>
             <Link 
-            sx={{color:"white",fontSize:"2rem"}}
+            sx={{color:"white",fontSize:"2rem",fontFamily:"'Rufina', serif"}}
             target="_blank"
             underline="hover" 
             href="https://en.wikipedia.org/wiki/Random_walk">
