@@ -1,5 +1,6 @@
 import React from "react"
 import logo from "./RcklessLogo.png"
+import {useNavigate} from "react-router-dom"
 import {AppBar, 
         Toolbar, 
         Typography, 
@@ -9,11 +10,13 @@ import {AppBar,
 
 const Navbar = (props) => {
 
+const navigate = useNavigate()
 
 return (
 <AppBar>
     <Toolbar>
-        <IconButton size="small"
+        <IconButton onClick={()=>{navigate("/")}}
+        size="small"
         edge="start"
         color="secondary"
         sx={{bgcolor: "secondary.main", marginTop:".5rem", marginBottom:".5rem"}}>
@@ -28,10 +31,10 @@ return (
             Robert Lewis
         </Typography>
         <Stack direction="row" spacing={2}>
-            <Button variant="outlined" color="buttonOutline">Home</Button>
-            <Button variant="outlined" color="buttonOutline">Projects</Button>
-            <Button variant="outlined" color="buttonOutline">About Me</Button>
-            <Button variant="contained" color="secondary">Contact me!</Button>
+            <Button onClick={()=>{navigate("/")}} variant="outlined" color="buttonOutline">Home</Button>
+            <Button onClick={()=>{navigate("/projects")}} variant="outlined" color="buttonOutline">Projects</Button>
+            <Button onClick={()=>{navigate("/about")}} variant="outlined" color="buttonOutline">About Me</Button>
+            <Button onClick={()=>{navigate("/contact")}} variant="contained" color="secondary">Contact me!</Button>
         </Stack>
     </Toolbar>
 </AppBar>
