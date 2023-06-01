@@ -1,7 +1,12 @@
 import { Card,CardMedia,Typography,Button,ButtonGroup,Box } from "@mui/material"
 import headshot from "../aboutPageAssets/Headshot.jpg"
 
-const ProfileCard = () => {
+const ProfileCard = (props) => {
+
+    const setDisplay = (e) => {
+        props.setDisplayID(e.target.value)
+    }
+
     return (
         <Card 
             sx={{bgcolor: "primary.main",
@@ -34,12 +39,12 @@ const ProfileCard = () => {
 
             <Box sx={{margin:"3%"}}>
                 <ButtonGroup variant="contained" orientation="vertical">
-                    <Button>Biography</Button>
-                    <Button>Hobbies</Button>
+                    <Button value={"biography"} onClick={setDisplay}>Biography</Button>
+                    <Button value={"hobbies"} onClick={setDisplay}>Hobbies</Button>
                 </ButtonGroup>
                 <ButtonGroup variant="contained" orientation="vertical">
-                    <Button>Professional</Button>
-                    <Button>Goals</Button>
+                    <Button value={"professional"} onClick={setDisplay}>Professional</Button>
+                    <Button value={"goals"} onClick={setDisplay}>Goals</Button>
                 </ButtonGroup>
             </Box>
 

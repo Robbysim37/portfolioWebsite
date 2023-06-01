@@ -1,6 +1,9 @@
 import { Card } from "@mui/material"
 
 const ProfileDescriptions = (props) => {
+
+    console.log(props.displayID)
+
     return(
         <Card 
         sx={{bgcolor: "primary.main",
