@@ -2,6 +2,7 @@ import React from "react"
 import './App.css';
 import NavBar from "./components/navbar/Navbar"
 import LandingPage from "./components/landingPage/LandingPage";
+import ProjectsPage from "./components/projectsPage/ProjectsPage";
 import {createTheme,ThemeProvider,Box} from "@mui/material"
 import {Routes,Route} from "react-router-dom"
 
@@ -36,7 +37,8 @@ function App() {
       <Box sx={{width:"100vw",height:"100vh",backgroundColor:"primary.dark"}}>
       
       <Routes>
-        <Route path="/" element={<LandingPage/>}></Route>
+        <Route path="/" element={<LandingPage/>}/>
+        <Route path="/projects" element={<ProjectsPage/>}/>
       </Routes>
       
       </Box>
