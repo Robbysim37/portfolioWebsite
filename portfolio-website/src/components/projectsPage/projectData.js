@@ -17,6 +17,13 @@ const qizurdProject = {
     image: qizurdLogo
 }
 
+const placeHolder = {
+    name: "Test",
+    description: "This is a test",
+    link:"https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    image: qizurdLogo
+}
+
 const projectList = [
     qizurdProject
 ]

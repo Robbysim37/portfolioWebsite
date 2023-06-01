@@ -1,17 +1,19 @@
-import { Card,CardMedia,CardContent,Typography } from "@mui/material"
+import { Card,CardMedia,CardContent,CardActionArea,Typography } from "@mui/material"
 const ProjectCard = (props) => {
     console.log(props)
     return(
-        <Card sx={{height:"30vh",width:"30vw"}}>
-            <CardMedia  height={"100px"} component={"img"} image={props.project.image}></CardMedia>
-            <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                    {props.project.name}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    {props.project.description}
-                </Typography>
-            </CardContent>
+        <Card sx={{width:"25vw",bgcolor: "primary.main"}}>
+            <CardActionArea target="_blank" href={props.project.link}>
+                <CardMedia component={"img"} image={props.project.image}></CardMedia>
+                <CardContent>
+                    <Typography gutterBottom color="text.white" variant="h5" component="div">
+                        {props.project.name}
+                    </Typography>
+                    <Typography variant="body2" color="text.white">
+                        {props.project.description}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
         </Card>
     )
 }
