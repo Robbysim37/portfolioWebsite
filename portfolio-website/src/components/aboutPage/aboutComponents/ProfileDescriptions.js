@@ -1,8 +1,13 @@
 import { Card } from "@mui/material"
+import {BIOGRAPHY,PROFESSIONAL,HOBBIES,GOALS} from "./stringUtils"
+import Biography from "./ProfileDescContent/Biography"
+import Professional from "./ProfileDescContent/Professional"
+import Goals from "./ProfileDescContent/Goals"
+import Hobbies from "./ProfileDescContent/Hobbies"
 
 const ProfileDescriptions = (props) => {
 
-    console.log(props.displayID)
+    const {displayID} = props
 
     return(
         <Card 
@@ -16,7 +21,10 @@ const ProfileDescriptions = (props) => {
         marginRight:"1.5%",
         borderRadius:"10px"}}>
 
-
+        {displayID === BIOGRAPHY && <Biography/>}
+        {displayID === PROFESSIONAL && <Professional/>}
+        {displayID === HOBBIES && <Hobbies/>}
+        {displayID === GOALS && <Goals/>}
 
         </Card>
     )
