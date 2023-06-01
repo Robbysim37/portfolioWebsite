@@ -2,7 +2,7 @@ import { Card,CardMedia,CardContent,CardActionArea,Typography } from "@mui/mater
 const ProjectCard = (props) => {
     console.log(props)
     return(
-        <Card sx={{width:"25vw",bgcolor: "primary.main"}}>
+        <Card sx={{width:"25vw",bgcolor: "primary.main",borderRadius:"10px"}}>
             <CardActionArea target="_blank" href={props.project.link}>
                 <CardMedia component={"img"} image={props.project.image}></CardMedia>
                 <CardContent>
