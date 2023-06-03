@@ -1,4 +1,4 @@
-import {Stack,List} from "@mui/material"
+import {Stack} from "@mui/material"
 import DescriptionHeader from "../styledComponents/DescriptionHeader"
 import Paragraph from "../styledComponents/Paragraph"
 

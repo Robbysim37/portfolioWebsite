@@ -17,6 +17,7 @@ const ProfileCard = (props) => {
             display:"flex",
             flexDirection:"column",
             alignItems:"center",
+            justifyContent:"space-evenly",
             marginLeft:"1.5%",
             marginRight:"1.5%",
             borderRadius:"10px"}}>
@@ -32,7 +33,7 @@ const ProfileCard = (props) => {
             <Typography sx={{fontFamily:"'Rufina', serif",
             textAlign:"center",
             color:"text.white",
-            fontSize:"1.2rem",
+            fontSize:"1.2vw",
             outlineColor:"black",
             outline:"10px"}}>
                 "You're only given one little spark of madness. 
