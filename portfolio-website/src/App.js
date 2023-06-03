@@ -4,6 +4,7 @@ import NavBar from "./components/navbar/Navbar"
 import LandingPage from "./components/landingPage/LandingPage";
 import ProjectsPage from "./components/projectsPage/ProjectsPage";
 import AboutPage from "./components/aboutPage/AboutPage";
+import ContactMePage from "./components/contactMePage/ContactMePage";
 import {createTheme,ThemeProvider,Box} from "@mui/material"
 import {Routes,Route} from "react-router-dom"
 
@@ -41,6 +42,7 @@ function App() {
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/projects" element={<ProjectsPage/>}/>
         <Route path="/about" element={<AboutPage/>}/>
+        <Route path="/contact" element={<ContactMePage/>}/>
       </Routes>
       
       </Box>
