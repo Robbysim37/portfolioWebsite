@@ -20,7 +20,7 @@ const Goals = () => {
             </Paragraph>
             <DescriptionHeader variant="h2">Long Term:</DescriptionHeader>
             <Paragraph>
-                I want to work on developing games. Preferrably0video games, <br/>
+                I want to work on developing games. Preferrably video games, <br/>
                 as the coding skills I have been learning will
                 contribute a lot for this specific goal
             </Paragraph>
