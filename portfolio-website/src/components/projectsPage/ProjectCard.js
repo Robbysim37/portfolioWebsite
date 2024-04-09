@@ -4,7 +4,7 @@ const ProjectCard = (props) => {
     return(
         <Card sx={{width:"25vw",bgcolor: "primary.main",borderRadius:"10px"}}>
             <CardActionArea target="_blank" href={props.project.link}>
-                <CardMedia component={"img"} image={props.project.image}></CardMedia>
+                <CardMedia sx={{height:"17vh",width:"25vw"}} component={"img"} image={props.project.image}></CardMedia>
                 <CardContent>
                     <Typography gutterBottom color="text.white" variant="h5" component="div">
                         {props.project.name}
